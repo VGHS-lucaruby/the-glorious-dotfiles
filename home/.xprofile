@@ -7,8 +7,8 @@
 # export LD_PRELOAD=/lib/libgtk3-nocsd.so.0
 
 # Editor and shits
-export VISUAL="vim"
-export EDITOR="vim"
+#export VISUAL="vim"
+#export EDITOR="vim"
 
 # FILE BROWSER
 export BROWSER="vivaldi-snapshot"
