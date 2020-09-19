@@ -1,0 +1,1 @@
+pactl set-sink-input-volume $(pacmd list-sink-inputs | tr '\n' '\r' | perl -pe 's/ *index: ([0-9]+).+?application\.name = "([^\r]+)"\r.+?(?=index:|$)/\2:\1\r/g' | tr '\r' '\n' | grep Spotify | perl -pe 's/[Spoitfy:]//g') +1%
