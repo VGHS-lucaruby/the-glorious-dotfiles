@@ -1,5 +1,5 @@
 configuration {
-	font: "Inter Regular 10";
+	font: "Comic Sans MS Bold 10";
 	show-icons: true;
 	drun-display-format: "{name}";
 	fullscreen: false;
@@ -46,7 +46,7 @@ button {
 }
 
 entry {
-	font: "Inter Regular 11";
+	font: "Comic Sans MS Bold 11";
 	background-color: @transparent;
 	text-color: @foreground;
 	expand: true;

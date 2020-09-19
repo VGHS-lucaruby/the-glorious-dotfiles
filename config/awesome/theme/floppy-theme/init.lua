@@ -4,7 +4,7 @@ local theme_dir = filesystem.get_configuration_dir() .. '/theme'
 local theme = {}
 
 theme.icons = theme_dir .. '/icons/'
-theme.font = 'Inter Regular 10'
+theme.font = 'Comic Sans MS Bold 10'
 theme.font_bold = 'Inter Bold 10'
 
 -- Colorscheme

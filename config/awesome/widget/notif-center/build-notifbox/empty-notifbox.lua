@@ -33,7 +33,7 @@ local empty_notifbox = wibox.widget {
 		},
 		{
 			text = 'Come back later.',
-			font = 'Inter Regular 10',
+			font = 'Comic Sans MS Bold 10',
 			align = 'center',
 			valign = 'center',
 			widget = wibox.widget.textbox

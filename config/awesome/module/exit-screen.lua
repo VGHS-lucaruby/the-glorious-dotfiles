@@ -20,7 +20,7 @@ local greeter_message = wibox.widget {
 
 local profile_name = wibox.widget {
 	markup = 'user@hostname',
-	font = 'Inter Regular 12',
+	font = 'Comic Sans MS Bold 12',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox

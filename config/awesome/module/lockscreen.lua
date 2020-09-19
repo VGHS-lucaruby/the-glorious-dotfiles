@@ -114,7 +114,7 @@ local msg_table = {
 
 local wanted_msg = wibox.widget {
 	markup = 'This incident will be reported!',
-	font   = 'Inter Regular 10',
+	font   = 'Comic Sans MS Bold 10',
 	align  = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox

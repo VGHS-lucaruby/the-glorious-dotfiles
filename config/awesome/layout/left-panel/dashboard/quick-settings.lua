@@ -6,7 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 local quick_header = wibox.widget {
 	text = 'Quick Settings',
-	font = 'Inter Regular 12',
+	font = 'Comic Sans MS Bold 12',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox

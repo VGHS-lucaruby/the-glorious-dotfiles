@@ -30,7 +30,7 @@ local calculator_screen = wibox.widget {
 	{
 		id = 'calcu_screen',
 		text = '0',
-		font = 'Inter Regular 20',
+		font = 'Comic Sans MS Bold 20',
 		align = 'right',
 		valign = 'center',
 		widget = wibox.widget.textbox,

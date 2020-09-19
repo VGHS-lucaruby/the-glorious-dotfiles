@@ -58,7 +58,7 @@ ruled.notification.connect_signal(
 		ruled.notification.append_rule {
 			rule       = { urgency = 'normal' },
 			properties = {
-				font        		= 'Inter Regular 10',
+				font        		= 'Comic Sans MS Bold 10',
 				bg      			= beautiful.transparent, 
 				fg 					= beautiful.fg_normal,
 				margin 				= dpi(16),
@@ -71,7 +71,7 @@ ruled.notification.connect_signal(
 		ruled.notification.append_rule {
 			rule       = { urgency = 'low' },
 			properties = { 
-				font        		= 'Inter Regular 10',
+				font        		= 'Comic Sans MS Bold 10',
 				bg     				= beautiful.transparent,
 				fg 					= beautiful.fg_normal,
 				margin 				= dpi(16),
@@ -129,7 +129,7 @@ naughty.connect_signal(
 						{
 							{
 								id     = 'text_role',
-								font   = 'Inter Regular 10',
+								font   = 'Comic Sans MS Bold 10',
 								widget = wibox.widget.textbox
 							},
 							widget = wibox.container.place

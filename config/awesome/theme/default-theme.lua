@@ -14,7 +14,7 @@ local tip = titlebar_icon_path
 local theme = {}
 
 -- Font
-theme.font = 'Inter Regular 10'
+theme.font = 'Comic Sans MS Bold 10'
 theme.font_bold = 'Inter Bold 10'
 
 -- Menu icon theme
@@ -29,7 +29,7 @@ local awesome_overrides = function(theme)
 	theme.wallpaper = theme.dir .. '/wallpapers/morning-wallpaper.jpg'
 
 	-- Default font
-	theme.font = 'Inter Regular 10'
+	theme.font = 'Comic Sans MS Bold 10'
 
 	-- Foreground
 	theme.fg_normal = '#ffffffde'
@@ -140,7 +140,7 @@ local awesome_overrides = function(theme)
 	theme.useless_gap = dpi(4)
 
 	-- Menu
-	theme.menu_font = 'Inter Regular 11'
+	theme.menu_font = 'Comic Sans MS Bold 11'
 	theme.menu_submenu = '' -- ➤
 
 	theme.menu_height = dpi(34)
@@ -180,7 +180,7 @@ local awesome_overrides = function(theme)
 	theme.taglist_spacing = dpi(0)
 
 	-- Tasklist
-	theme.tasklist_font = 'Inter Regular 10'
+	theme.tasklist_font = 'Comic Sans MS Bold 10'
 	theme.tasklist_bg_normal = theme.background .. '99'
 	theme.tasklist_bg_focus = theme.background
 	theme.tasklist_bg_urgent = '#E91E63' .. '99'
