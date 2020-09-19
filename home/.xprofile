@@ -11,7 +11,7 @@ export VISUAL="vim"
 export EDITOR="vim"
 
 # FILE BROWSER
-export BROWSER="firefox"
+export BROWSER="vivaldi-snapshot"
 
 # TERM
 export TERM=xterm-kitty
@@ -25,13 +25,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin/
 # Enable hidden scrollbars if using  gtk3-mushrooms
 export GTK_OVERLAY_SCROLLING=1
 
-RANGER_LOAD_DEFAULT_RC=FALSE
-
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Don't minimize SDL games on focus loss
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
-
-# Set Java Environment
-archlinux-java set java-13-openjdk
-export _JAVA_AWT_WM_NONREPARENTING=1
