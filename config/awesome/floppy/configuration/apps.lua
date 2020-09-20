@@ -33,9 +33,6 @@ return {
 
 		-- Lockscreen
 		lock 					= 'awesome-client "awesome.emit_signal(\'module::lockscreen_show\')"',
-		
-		-- Quake-like Terminal
-		-- quake 					= 'kitty --name QuakeTerminal',
 
 		-- Rofi Web Search
 		rofi_global				= 'rofi -dpi ' .. screen.primary.dpi .. 
@@ -71,7 +68,7 @@ return {
 		-- 'mpd',
 
 		-- Power manager
-		-- 'xfce4-power-manager',
+	    'xfce4-power-manager',
 
 		-- Credential manager
 		'/usr/lib/polkit-kde-authentication-agent-1 &' ..

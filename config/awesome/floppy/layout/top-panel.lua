@@ -57,9 +57,8 @@ local top_panel = function(s, offset)
 	s.tray_toggler  		= require('widget.tray-toggle')
 	s.updater 				= require('widget.package-updater')()
 	s.screen_rec 			= require('widget.screen-recorder')()
-	s.mpd       			= require('widget.mpd')()
-	s.bluetooth   			= require('widget.bluetooth')()
-	s.battery     			= require('widget.battery')()
+	-- s.bluetooth   			= require('widget.bluetooth')()
+	-- s.battery     			= require('widget.battery')()
 	s.network       		= require('widget.network')()
 	s.info_center_toggle	= require('widget.info-center-toggle')()
 
@@ -83,10 +82,9 @@ local top_panel = function(s, offset)
 			s.tray_toggler,
 			s.updater,
 			s.screen_rec,
-			s.mpd,
 			s.network,
-			s.bluetooth,
-			s.battery,
+			-- s.bluetooth,
+			-- s.battery,
 			layout_box,
 			s.info_center_toggle
 		}
