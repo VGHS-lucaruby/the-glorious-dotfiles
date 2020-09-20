@@ -26,7 +26,7 @@ return {
 		-- bluetooth_manager 		= 'blueman-manager',
 
 		-- Power manager
-		-- power_manager 			= 'xfce4-power-manager',
+		power_manager 			= 'xfce4-power-manager',
 
 		-- GUI Package manager
 		package_manager 		= 'pamac-manager',
@@ -96,6 +96,7 @@ return {
 
 		'steam-native',
 		'discord-canary',
+		'spotify',
 		'thunderbird'
 	},
 

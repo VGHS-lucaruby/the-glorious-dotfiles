@@ -26,7 +26,7 @@ local empty_notifbox = wibox.widget {
 		},
 		{
 			text = 'Wow, such empty.',
-			font = 'Inter Bold 14',
+			font = 'Comic Sans MS Bold 14',
 			align = 'center',
 			valign = 'center',
 			widget = wibox.widget.textbox

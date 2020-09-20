@@ -5,7 +5,7 @@ local theme = {}
 
 theme.icons = theme_dir .. '/icons/'
 theme.font = 'Comic Sans MS Bold 10'
-theme.font_bold = 'Inter Bold 10'
+theme.font_bold = 'Comic Sans MS Bold 10'
 
 -- Colorscheme
 theme.system_black_dark = '#3D4C5F'

@@ -32,7 +32,7 @@ end
 ui_noti_builder.notifbox_title = function(title)
 	return wibox.widget {
 		markup = title,
-		font   = 'Inter Bold 12',
+		font   = 'Comic Sans MS Bold 12',
 		align  = 'left',
 		valign = 'center',
 		widget = wibox.widget.textbox
@@ -54,7 +54,7 @@ end
 ui_noti_builder.notifbox_appname = function(app)
 	return wibox.widget {
 		markup  = app,
-		font   = 'Inter Bold 12',
+		font   = 'Comic Sans MS Bold 12',
 		align  = 'left',
 		valign = 'center',
 		widget = wibox.widget.textbox

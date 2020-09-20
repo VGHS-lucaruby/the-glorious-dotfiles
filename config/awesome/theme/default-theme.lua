@@ -15,7 +15,7 @@ local theme = {}
 
 -- Font
 theme.font = 'Comic Sans MS Bold 10'
-theme.font_bold = 'Inter Bold 10'
+theme.font_bold = 'Comic Sans MS Bold 10'
 
 -- Menu icon theme
 theme.icon_theme = 'Tela-blue-dark'
@@ -204,7 +204,7 @@ local awesome_overrides = function(theme)
 	theme.snap_border_width = dpi(15)
 
 	-- Hotkey popup
-	theme.hotkeys_font = 'Inter Bold'
+	theme.hotkeys_font = 'Comic Sans MS Bold'
 	theme.hotkeys_description_font   = 'Inter Regular Regular'
 	theme.hotkeys_bg = theme.background
 	theme.hotkeys_group_margin = dpi(20)

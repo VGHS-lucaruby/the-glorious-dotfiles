@@ -45,7 +45,7 @@ ruled.notification.connect_signal(
 		ruled.notification.append_rule {
 			rule       = { urgency = 'critical' },
 			properties = { 
-				font        		= 'Inter Bold 10',
+				font        		= 'Comic Sans MS Bold 10',
 				bg 					= '#ff0000', 
 				fg 					= '#ffffff',
 				margin 				= dpi(16),
@@ -166,7 +166,7 @@ naughty.connect_signal(
 												{
 													{
 														markup = n.app_name or 'System Notification',
-														font = 'Inter Bold 10',
+														font = 'Comic Sans MS Bold 10',
 														align = 'center',
 														valign = 'center',
 														widget = wibox.widget.textbox

@@ -52,7 +52,7 @@ local locked_tag = nil
 local uname_text = wibox.widget {
 	id = 'uname_text',
 	markup = '$USER',
-	font = 'Inter Bold 12',
+	font = 'Comic Sans MS Bold 12',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -78,9 +78,9 @@ local profile_imagebox = wibox.widget {
 	widget = wibox.widget.imagebox
 }
 
-local clock_format = '<span font="Inter Bold 52">%H:%M</span>'
+local clock_format = '<span font="Comic Sans MS Bold 52">%H:%M</span>'
 if not locker_config.military_clock then
-	clock_format = '<span font="Inter Bold 52">%I:%M %p</span>'
+	clock_format = '<span font="Comic Sans MS Bold 52">%I:%M %p</span>'
 end
 
 local time = wibox.widget.textclock(
@@ -90,7 +90,7 @@ local time = wibox.widget.textclock(
 
 local wanted_text = wibox.widget {
 	markup = 'INTRUDER ALERT!',
-	font   = 'Inter Bold 12',
+	font   = 'Comic Sans MS Bold 12',
 	align  = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -155,7 +155,7 @@ end
 
 local date = wibox.widget {
 	markup = date_value(),
-	font = 'Inter Bold 20',
+	font = 'Comic Sans MS Bold 20',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox

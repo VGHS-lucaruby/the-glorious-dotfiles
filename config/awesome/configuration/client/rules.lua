@@ -111,164 +111,165 @@ ruled.client.connect_signal(
 			}
 		}
 
-		-- Terminal emulators
-		ruled.client.append_rule {
-			id         = 'terminals',
-			rule_any   = { 
-				class = { 
-					'URxvt',
-					'XTerm',
-					'UXTerm',
-					'kitty',
-					'K3rmit'
-				}
-			},
-			properties = {
-				tag = '1',
-				switch_to_tags = true,
-				size_hints_honor = false,
-				titlebars_enabled = true
+	-- Browsers
+	ruled.client.append_rule {
+		id         = "web_browsers",
+		rule_any   = { 
+			class = {
+				"Vivaldi",
+				"firefox",
+				"Tor Browser"
 			}
+		},
+		properties = { 
+			tag = '1'
 		}
+	}
 
-		-- Browsers and chats
-		ruled.client.append_rule {
-			id         = 'web_browsers',
-			rule_any   = { 
-				class = {
-					'firefox',
-					'Tor Browser',
-					'discord',
-					'Chromium',
-					'Google-chrome'
-				}
-			},
-			properties = { 
-				tag = '2'
+	-- File managers
+	ruled.client.append_rule {
+		id         = "file_managers",
+		rule_any   = {  
+			class = {
+				"dolphin",
+				"ark",
+				"Nemo",
+				"File-roller"
 			}
+		},
+		properties = { 
+			tag = '2',
+			switchtotag = true
 		}
+	}
 
-		-- Text editors and word processing
-		ruled.client.append_rule {
-			id         = 'text_editors',
-			rule_any   = {
-				class = {
-					'Geany',
-					'Atom',
-					'Subl3',
-					'code-oss'
-				},
-				name  = {
-					'LibreOffice',
-					'libreoffice'
-				}
+	-- Gaming
+	ruled.client.append_rule {
+		id         = "gaming",
+		rule_any   = {  
+			class = {
+				"Wine",
+				"Win64",
+				"steam",
+				"Albion Online",
+				"Civ6Sub",
+				"WineDesktop",
+				"portal2_linux",
+				"DRAG"
 			},
-			properties = { 
-				tag = '3'
-			}
+		},
+		properties = { 
+			tag = '3',
+			skip_decoration = true,
+			draw_backdrop = false,
+			switchtotag = true,
+			floating = false,
+			hide_titlebars = true
 		}
+	}
 
-		-- File managers
-		ruled.client.append_rule {
-			id         = 'file_managers',
-			rule_any   = {
-				class = {
-					'dolphin',
-					'ark',
-					'Nemo',
-					'File-roller'
-				}
-			},
-			properties = { 
-				tag = '4',
-				switch_to_tags = true
+	-- Steam
+	ruled.client.append_rule {
+		id         = "file_managers",
+		rule_any   = {  
+			class = {
+				"Steam",
+				"Lutris"
 			}
+		},
+		properties = { 
+			tag = '4',
+			switchtotag = true
 		}
+	}
 
-		-- Multimedia
-		ruled.client.append_rule {
-			id         = 'multimedia',
-			rule_any   = {
-				class = {
-					'vlc',
-					'Spotify'
-				}
-			},
-			properties = { 
-				tag = '5',
-				switch_to_tags = true,
-				draw_backdrop = false
+	-- Social
+	ruled.client.append_rule {
+		id         = "social",
+		rule_any   = { 
+			class = {
+				"discord",
+				"Teams"
 			}
+		},
+		properties = { 
+			tag = '5'
 		}
+	}
 
-		-- Gaming
-		ruled.client.append_rule {
-			id         = 'gaming',
-			rule_any   = {
-				class = {
-					'Wine',
-					'dolphin-emu',
-					'Steam',
-					'Citra',
-					'supertuxkart'
-				},
-				name = { 'Steam' }
-			},
-			properties = { 
-				tag = '6',
-				skip_decoration = true,
-				switch_to_tags = true,
-				floating = true,
-				placement = awful.placement.centered
-			}
-		}
+	-- Email
+	ruled.client.append_rule {
+		id         = "email",
+		rule_any   = {  
+			class = {
+				"Thunderbird"
 
-		-- Multimedia Editing
-		ruled.client.append_rule {
-			id         = 'graphics_editors',
-			rule_any   = {
-				class = {
-					'Gimp-2.10',
-					'Inkscape',
-					'Flowblade'
-				}
-			},
-			properties = { 
-				tag = '7'
 			}
+		},
+		properties = { 
+			tag = '6'
 		}
+	}
 
-		-- Sandboxes and VMs
-		ruled.client.append_rule {
-			id         = 'sandbox',
-			rule_any   = {
-				class = {
-					'VirtualBox Manage',
-					'VirtualBox Machine'
-				}
-			},
-			properties = { 
-				tag = '8'
+	-- Multimedia
+	ruled.client.append_rule {
+		id         = "multimedia",
+		rule_any   = {  
+			class = {
+				"mpv",
+				"Spotify",
+				"Google Play Music Desktop Player"
 			}
+		},
+		properties = { 
+			tag = '7',
+			draw_backdrop = false
 		}
+	}
 
-		-- IDEs and Tools
-		ruled.client.append_rule {
-			id         = 'ide',
-			rule_any   = {
-				class = {
-					'Oomox',
-					'Unity',
-					'UnityHub',
-					'jetbrains-studio',
-					'Ettercap'
-				}
-			},
-			properties = { 
-				tag = '9',
-				skip_decoration = true
+	-- terminal emulators
+	ruled.client.append_rule {
+		id         = "terminals",
+		rule_any   = { 
+			class = { 
+				"URxvt",
+				"XTerm",
+				"UXTerm",
+				"kitty",
+				"K3rmit"
 			}
+		},
+		except_any = {
+			-- Exclude the QuakeTerminal
+			instance = { "QuakeTerminal" }
+		},
+		properties = {
+			tag = '8',
+			switchtotag = true,
+			draw_backdrop = false,
+			size_hints_honor = false
 		}
+	}
+
+	-- text editors
+	ruled.client.append_rule {
+		id         = "text_editors",
+		rule_any   = {  
+			class = {
+				"Geany",
+				"Atom",
+				"Subl3",
+				"code-oss"
+			},
+			name  = {
+				"LibreOffice",
+				"libreoffice"
+			}
+		},
+		properties = { 
+			tag = '9'
+		}
+	}
 
 		-- Image viewers
 		ruled.client.append_rule {
