@@ -5,18 +5,16 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="240"
-   height="240"
-   viewBox="0 0 63.49875 63.49875"
+   width="64"
+   height="64"
    version="1.1"
-   id="svg29"
-   sodipodi:docname="file-manager.svg"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+   id="svg14"
+   sodipodi:docname="folder.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
-     id="metadata33">
+     id="metadata20">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -27,6 +25,8 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <defs
+     id="defs18" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -36,103 +36,59 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1321"
-     inkscape:window-height="740"
-     id="namedview31"
+     inkscape:window-width="914"
+     inkscape:window-height="1036"
+     id="namedview16"
      showgrid="false"
-     inkscape:pagecheckerboard="true"
-     inkscape:zoom="0.23046875"
-     inkscape:cx="-703.45904"
-     inkscape:cy="-446.22747"
-     inkscape:window-x="45"
-     inkscape:window-y="28"
+     inkscape:zoom="14.671875"
+     inkscape:cx="32.034079"
+     inkscape:cy="32"
+     inkscape:window-x="2568"
+     inkscape:window-y="36"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg29" />
-  <defs
-     id="defs11">
-    <linearGradient
-       id="a">
-      <stop
-         offset="0"
-         id="stop2" />
-      <stop
-         offset="1"
-         stop-opacity="0"
-         id="stop4" />
-    </linearGradient>
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="b">
-      <rect
-         ry="0.52899998"
-         y="285.358"
-         x="0.52899998"
-         height="9.5249996"
-         width="15.875"
-         transform="rotate(45)"
-         id="rect7"
-         style="fill:#5677fc;stroke-width:0.25099999;stroke-opacity:0.19599998;paint-order:markers stroke fill" />
-    </clipPath>
-    <linearGradient
-       xlink:href="#a"
-       id="c"
-       x1="-197.10201"
-       y1="217.681"
-       x2="-196.914"
-       y2="219.36501"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
-  <g
-     transform="matrix(3.3330578,0,0,3.3330578,3.5283746,-930.38776)"
-     id="g27">
-    <path
-       d="m 3.44,282.448 c -0.294,0 -0.395,0.269 -0.53,0.53 H 2.117 a 0.528,0.528 0 0 0 -0.53,0.528 v 5.292 c 0,0.293 0.237,0.53 0.53,0.53 h 12.7 c 0.293,0 0.529,-0.237 0.529,-0.53 v -5.292 a 0.528,0.528 0 0 0 -0.53,-0.529 H 7.674 c -0.155,-0.249 -0.236,-0.53 -0.53,-0.53 z"
-       id="path13"
-       inkscape:connector-curvature="0"
-       style="fill:#5677fc;paint-order:markers stroke fill" />
-    <path
-       d="m 3.44,282.448 c -0.294,0 -0.395,0.269 -0.53,0.53 H 2.117 a 0.528,0.528 0 0 0 -0.53,0.528 v 5.292 c 0,0.293 0.237,0.53 0.53,0.53 h 12.7 c 0.293,0 0.529,-0.237 0.529,-0.53 v -5.292 a 0.528,0.528 0 0 0 -0.53,-0.529 H 7.674 c -0.155,-0.249 -0.236,-0.53 -0.53,-0.53 z"
-       id="path15"
-       inkscape:connector-curvature="0"
-       style="opacity:0.18000004;paint-order:markers stroke fill" />
-    <rect
-       width="12.171"
-       height="5.027"
-       x="2.381"
-       y="283.771"
-       ry="0.26499999"
-       id="rect17"
-       style="fill:#ffffff;paint-order:markers stroke fill" />
-    <rect
-       width="15.875"
-       height="9.5249996"
-       x="0.52899998"
-       y="285.358"
-       ry="0.52899998"
-       id="rect19"
-       style="fill:#5677fc;paint-order:markers stroke fill" />
-    <path
-       d="m 8.467,284.3 h 7.408 c 0.293,0 0.53,0.236 0.53,0.53 v 3.968 c 0,0.293 -0.237,0.529 -0.53,0.529 H 6.152 c -0.294,0 -0.677,-0.276 -0.53,-0.53 l 2.316,-3.968 C 8.085,284.576 8.174,284.3 8.467,284.3 Z"
-       id="path21"
-       inkscape:connector-curvature="0"
-       style="fill:#5677fc;paint-order:markers stroke fill" />
-    <rect
-       width="3.175"
-       height="0.52899998"
-       x="3.704"
-       y="282.71201"
-       ry="0.26499999"
-       id="rect23"
-       style="opacity:0.25;paint-order:stroke markers fill" />
-    <rect
-       width="5.2919998"
-       height="4.7620001"
-       x="-199.58701"
-       y="217.868"
-       ry="0.132"
-       transform="rotate(-45)"
-       clip-path="url(#b)"
-       id="rect25"
-       style="opacity:0.1;fill:url(#c);paint-order:stroke markers fill" />
-  </g>
+     inkscape:current-layer="svg14" />
+  <rect
+     style="opacity:0.2"
+     width="50"
+     height="32"
+     x="7"
+     y="24"
+     rx="2.5"
+     ry="2.5"
+     id="rect2" />
+  <path
+     style="fill:#928374"
+     d="M 7,44.5 C 7,45.885 8.115,47 9.5,47 H 54.5 C 55.885,47 57,45.885 57,44.5 V 17.5 C 57,16.115 55.885,15 54.5,15 H 29 V 12.5 C 29,11.115 27.885,10 26.5,10 H 9.5 C 8.115,10 7,11.115 7,12.5"
+     id="path4" />
+  <rect
+     style="opacity:0.2"
+     width="50"
+     height="32"
+     x="7"
+     y="22"
+     rx="2.5"
+     ry="2.5"
+     id="rect6" />
+  <rect
+     style="fill:#e4e4e4"
+     width="44"
+     height="20"
+     x="10"
+     y="18"
+     rx="2.5"
+     ry="2.5"
+     id="rect8" />
+  <rect
+     style="fill:#a89984"
+     width="50"
+     height="32"
+     x="7"
+     y="23"
+     rx="2.5"
+     ry="2.5"
+     id="rect10" />
+  <path
+     style="opacity:0.1;fill:#ffffff"
+     d="M 9.5,10 C 8.115,10 7,11.115 7,12.5 V 13.5 C 7,12.115 8.115,11 9.5,11 H 26.5 C 27.885,11 29,12.115 29,13.5 V 12.5 C 29,11.115 27.885,10 26.5,10 Z M 29,15 V 16 H 54.5 C 55.89,16 57,17.115 57,18.5 V 17.5 C 57,16.115 55.89,15 54.5,15 Z"
+     id="path12" />
 </svg>
