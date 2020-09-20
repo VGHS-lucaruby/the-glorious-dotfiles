@@ -140,7 +140,7 @@ import os
 x=0
 y=0
 env = os.environ
-env['LANG'] = 'en_US'
+env['LANG'] = 'en_GB'
 app = '"Spotify"'
 pactl = subprocess.check_output(['pactl', 'list', 'sink-inputs'], env=env).decode().strip().split()
 if app in pactl:
@@ -205,7 +205,7 @@ import sys
 x=0
 y=0
 env = os.environ
-env['LANG'] = 'en_US'
+env['LANG'] = 'en_GB'
 app = '"Spotify"'
 pactl = subprocess.check_output(['pactl', 'list', 'sink-inputs'], env=env).decode().strip().split()
 if app in pactl:
