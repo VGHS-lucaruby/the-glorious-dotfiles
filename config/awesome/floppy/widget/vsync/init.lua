@@ -1,24 +1,17 @@
 local awful = require('awful')
 local wibox = require('wibox')
 local gears = require('gears')
-
-local clickable_container = require('widget.window-effects.clickable-container')
+local clickable_container = require('widget.vsync.clickable-container')
 local dpi = require('beautiful').xresources.apply_dpi
-
 local filesystem = gears.filesystem
 local config_dir = filesystem.get_configuration_dir()
-
 local icons = require('theme.icons')
-
 local apps = require('configuration.apps')
-
 local frame_status = nil
-
-
 
 local action_name = wibox.widget {
 	text = 'VSync',
-	font = 'SF Pro Text Regular 11',
+	font = 'Comic Sans MS Bold 11',
 	align = 'left',
 	widget = wibox.widget.textbox
 }
@@ -50,8 +43,6 @@ local update_imagebox = function()
 		button_widget.icon:set_image(icons.toggled_off)
 	end
 end
-
-
 
 local check_vsync_status = function()
 	awful.spawn.easy_async_with_shell(
@@ -148,11 +139,10 @@ local action_widget =  wibox.widget {
 }
 
 awesome.connect_signal(
-	'widget::vsync:toggle', 
+	'widget::vsync', 
 	function() 
 		toggle_vsync_fx()
 	end
 )
-
 
 return action_widget

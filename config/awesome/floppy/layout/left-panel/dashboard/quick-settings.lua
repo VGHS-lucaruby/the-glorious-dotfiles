@@ -6,7 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 local quick_header = wibox.widget {
 	text = 'Quick Settings',
-	font = 'Comic Sans MS Bold 12',
+	font = 'Inter Regular 12',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -38,12 +38,14 @@ return wibox.widget {
 			{
 				{
 					layout = wibox.layout.fixed.vertical,
-					require('widget.brightness-slider'),
+				--	require('widget.brightness-slider'),
 					require('widget.volume-slider'),
-					--require('widget.airplane-mode'),
-					--require('widget.bluetooth-toggle'),
-					require('widget.blue-light'),
-					require('widget.vsync.vsync-toggle')
+					require('widget.blur-slider'),
+				--	require('widget.airplane-mode'),
+				--	require('widget.bluetooth-toggle'),
+					require('widget.blur-toggle'),
+					require('widget.vsync'),
+					require('widget.blue-light')
 				},
 				bg = beautiful.groups_bg,
 				shape = function(cr, width, height)
@@ -51,18 +53,6 @@ return wibox.widget {
 				end,
 				widget = wibox.container.background
 			}
-			-- {
-			-- 	{
-			-- 		layout = wibox.layout.fixed.vertical,
-			-- 		require('widget.blur-slider'),
-			-- 		require('widget.blur-toggle')
-			-- 	},
-			-- 	bg = beautiful.groups_bg,
-			-- 	shape = function(cr, width, height)
-			-- 		gears.shape.rounded_rect(cr, width, height, beautiful.groups_radius) 
-			-- 	end,
-			-- 	widget = wibox.container.background
-			-- }
 		}
 	}
 }

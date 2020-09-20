@@ -338,6 +338,14 @@ local globalKeys = awful.util.table.join(
 		{description = 'toggle blur effects', group = 'Utility'}
 	),
 	awful.key(
+        {modkey},
+        'v',
+        function()
+            awesome.emit_signal("widget::vsync")
+        end,
+        {description = "toggle compositor vsync", group = 'Utility'}
+    ),
+	awful.key(
 		{modkey},
 		']',
 		function()

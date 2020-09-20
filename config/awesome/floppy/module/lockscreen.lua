@@ -36,7 +36,7 @@ local locker_config = {
 	wall_dir = config_dir .. (config.module.lockscreen.wall_dir or 'theme/wallpapers/'),
 
 	-- Default wallpaper
-	default_wall_name = config.module.lockscreen.default_wall_name or 'morning-wallpaper.jpg',
+	default_wall_name = config.module.lockscreen.default_wall_name or 'Wallpaper-Morning.png',
 
 	-- /tmp directory
 	tmp_wall_dir = config.module.lockscreen.tmp_wall_dir or '/tmp/awesomewm/' .. os.getenv('USER') .. '/'
