@@ -96,7 +96,7 @@ local globalKeys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey},
-		'p',
+		'o',
 		function()
 			awful.tag.incgap(1)
 		end,
@@ -104,7 +104,7 @@ local globalKeys = awful.util.table.join(
 	),
 	awful.key(
 		{modkey, 'Shift'},
-		'p',
+		'o',
 		function()
 			awful.tag.incgap(-1)
 		end,
@@ -185,43 +185,47 @@ local globalKeys = awful.util.table.join(
 		end,
 		{description = 'restore minimized', group = 'screen'}
 	),
-	-- awful.key(
-	-- 	{},
-	-- 	'XF86MonBrightnessUp',
-	-- 	function()
-	-- 		awful.spawn('light -A 10', false)
-	-- 		awesome.emit_signal('widget::brightness')
-	-- 		awesome.emit_signal('module::brightness_osd:show', true)
-	-- 	end,
-	-- 	{description = 'increase brightness by 10%', group = 'hotkeys'}
-	-- ),
-	-- awful.key(
-	-- 	{},
-	-- 	'XF86MonBrightnessDown',
-	-- 	function()
-	-- 		awful.spawn('light -U 10', false)
-	-- 		awesome.emit_signal('widget::brightness')
-	-- 		awesome.emit_signal('module::brightness_osd:show', true)
-	-- 	end,
-	-- 	{description = 'decrease brightness by 10%', group = 'hotkeys'}
-	-- ),
-	-- Volume control
-    awful.key(
-        {},
-        'XF86AudioRaiseVolume',
-        function()
-            awful.spawn.with_shell('sh $HOME/.config/awesome/spotify-volup.sh')
-        end,
-        {description = 'increase spotify volume up by 1%', group = 'hotkeys'}
-    ),
-    awful.key(
-        {},
-        'XF86AudioLowerVolume',
-        function()
-            awful.spawn.with_shell('sh $HOME/.config/awesome/spotify-voldwn.sh')
-        end,
-        {description = 'decrease spotify volume up by 1%', group = 'hotkeys'}
-    ),
+	awful.key(
+		{},
+		'XF86MonBrightnessUp',
+		function()
+			awful.spawn('light -A 10', false)
+			awesome.emit_signal('widget::brightness')
+			awesome.emit_signal('module::brightness_osd:show', true)
+		end,
+		{description = 'increase brightness by 10%', group = 'hotkeys'}
+	),
+	awful.key(
+		{},
+		'XF86MonBrightnessDown',
+		function()
+			awful.spawn('light -U 10', false)
+			awesome.emit_signal('widget::brightness')
+			awesome.emit_signal('module::brightness_osd:show', true)
+		end,
+		{description = 'decrease brightness by 10%', group = 'hotkeys'}
+	),
+	-- ALSA volume control
+	awful.key(
+		{},
+		'XF86AudioRaiseVolume',
+		function()
+			awful.spawn('amixer -D pulse sset Master 5%+', false)
+			awesome.emit_signal('widget::volume')
+			awesome.emit_signal('module::volume_osd:show', true)
+		end,
+		{description = 'increase volume up by 5%', group = 'hotkeys'}
+	),
+	awful.key(
+		{},
+		'XF86AudioLowerVolume',
+		function()
+			awful.spawn('amixer -D pulse sset Master 5%-', false)
+			awesome.emit_signal('widget::volume')
+			awesome.emit_signal('module::volume_osd:show', true)
+		end,
+		{description = 'decrease volume up by 5%', group = 'hotkeys'}
+	),
 	awful.key(
 		{},
 		'XF86AudioMute',
@@ -234,7 +238,7 @@ local globalKeys = awful.util.table.join(
 		{},
 		'XF86AudioNext',
 		function()
-			awful.spawn('dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next', false)
+			awful.spawn('mpc next', false)
 		end,
 		{description = 'next music', group = 'hotkeys'}
 	),
@@ -242,7 +246,7 @@ local globalKeys = awful.util.table.join(
 		{},
 		'XF86AudioPrev',
 		function()
-			awful.spawn('dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous', false)
+			awful.spawn('mpc prev', false)
 		end,
 		{description = 'previous music', group = 'hotkeys'}
 	),
@@ -250,7 +254,7 @@ local globalKeys = awful.util.table.join(
 		{},
 		'XF86AudioPlay',
 		function()
-			awful.spawn('dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause', false)
+			awful.spawn('mpc toggle', false)
 		end,
 		{description = 'play/pause music', group = 'hotkeys'}
 
@@ -302,16 +306,6 @@ local globalKeys = awful.util.table.join(
 			awesome.emit_signal('module::quake_terminal:toggle')
 		end,
 		{description = 'dropdown application', group = 'launcher'}
-	),
-	awful.key(
-		{modkey}, 
-		'm',
-		function()
-			if awful.screen.focused().musicpop then
-				awesome.emit_signal('widget::music', 'keyboard')
-			end
-		end,
-		{description = 'toggle music widget', group = 'launcher'}
 	),
 	awful.key(
 		{ }, 
@@ -422,13 +416,13 @@ local globalKeys = awful.util.table.join(
 		function()
 			local focused = awful.screen.focused()
 
-			if focused.left_panel then
-				focused.left_panel:hide_dashboard()
-				focused.left_panel.opened = false
+			if focused.control_center then
+				focused.control_center:hide_dashboard()
+				focused.control_center.opened = false
 			end
-			if focused.right_panel then
-				focused.right_panel:hide_dashboard()
-				focused.right_panel.opened = false
+			if focused.info_center then
+				focused.info_center:hide_dashboard()
+				focused.info_center.opened = false
 			end
 			awful.spawn(apps.default.rofi_appmenu, false)
 		end,
@@ -440,89 +434,49 @@ local globalKeys = awful.util.table.join(
 		function()
 			local focused = awful.screen.focused()
 
-			if focused.left_panel then
-				focused.left_panel:hide_dashboard()
-				focused.left_panel.opened = false
+			if focused.control_center then
+				focused.control_center:hide_dashboard()
+				focused.control_center.opened = false
 			end
-			if focused.right_panel then
-				focused.right_panel:hide_dashboard()
-				focused.right_panel.opened = false
+			if focused.info_center then
+				focused.info_center:hide_dashboard()
+				focused.info_center.opened = false
 			end
 			awful.spawn(apps.default.rofi_appmenu, false)
 		end,
 		{description = 'open application drawer', group = 'launcher'}
 	),
 	awful.key(
+		{modkey, 'Shift'},
+		'x',
+		function()
+			awful.spawn(apps.default.rofi_global, false)
+		end,
+		{description = 'open global search', group = 'launcher'}
+	),
+	awful.key(
 		{modkey},
 		'r',
 		function()
 			local focused = awful.screen.focused()
-
-			if focused.right_panel and focused.right_panel.visible then
-				focused.right_panel.visible = false
+			if focused.info_center and focused.info_center.visible then
+				focused.info_center:toggle()
 			end
-			screen.primary.left_panel:toggle()
+			focused.control_center:toggle()
 		end,
-		{description = 'open sidebar', group = 'launcher'}
+		{description = 'open control center', group = 'launcher'}
 	),
 	awful.key(
 		{modkey, 'Shift'},
 		'r',
 		function()
 			local focused = awful.screen.focused()
-
-			if focused.right_panel and focused.right_panel.visible then
-				focused.right_panel.visible = false
+			if focused.control_center and focused.control_center.visible then
+				focused.control_center:toggle()
 			end
-			screen.primary.left_panel:toggle(true)
+			focused.info_center:toggle()
 		end,
-		{description = 'open sidebar and global search', group = 'launcher'}
-	),
-	awful.key(
-		{modkey}, 
-		'F2',
-		function()
-			local focused = awful.screen.focused()
-
-			if focused.left_panel and focused.left_panel.opened then
-				focused.left_panel:toggle()
-			end
-
-			if focused.right_panel then
-				if _G.right_panel_mode == 'today_mode' or not focused.right_panel.visible then
-					focused.right_panel:toggle()
-					switch_rdb_pane('today_mode')
-				else
-					switch_rdb_pane('today_mode')
-				end
-
-				_G.right_panel_mode = 'today_mode'
-			end
-		end,
-		{description = 'open today pane', group = 'launcher'}
-	),
-	awful.key(
-		{modkey}, 
-		'F3',
-		function()
-			local focused = awful.screen.focused()
-
-			if focused.left_panel and focused.left_panel.opened then
-				focused.left_panel:toggle()
-			end
-
-			if focused.right_panel then
-				if _G.right_panel_mode == 'notif_mode' or not focused.right_panel.visible then
-					focused.right_panel:toggle()
-					switch_rdb_pane('notif_mode')
-				else
-					switch_rdb_pane('notif_mode')
-				end
-
-				_G.right_panel_mode = 'notif_mode'
-			end
-		end,
-		{description = 'open notification center', group = 'launcher'}
+		{description = 'open info center', group = 'launcher'}
 	)
 )
 

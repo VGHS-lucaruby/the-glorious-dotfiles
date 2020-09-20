@@ -135,15 +135,6 @@ local client_keys = awful.util.table.join(
 		end,
 		{description = 'move floating client to the right by 10 px', group = 'client'}
 	),
-
-	-- Screen management
-		  awful.key(
-			{modkey},
-			'o',
-			awful.client.movetoscreen,
-			{description = 'move window to next screen', group = 'client'}
-	  ),
-	-- Increasing floating client size
 	awful.key(
 		{modkey, 'Shift'},
 		'Up',

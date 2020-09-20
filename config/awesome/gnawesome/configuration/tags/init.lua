@@ -5,59 +5,65 @@ local icons = require('theme.icons')
 
 local tags = {
 	{
-		icon = icons.web_browser,
-		type = 'chrome',
-		default_app = 'vivaldi-snapshot',
-		screen = 1
-	},	
-	{
-		icon = icons.file_manager,
-		type = 'files',
-		default_app = 'nemo',
-		screen = 1
-	},
-	{
-		icon = icons.games,
-		type = 'game',
-		default_app = 'wine',
-		screen = 1
-	},
-	{
-		icon = icons.steam,
-		type = 'steam',
-		default_app = 'steam-native',
-		screen = 1
-	},
-    {
-	    icon = icons.discord,
-	    type = 'social',
-	    default_app = 'discord-canary',
-	    screen = 1
-	},
-	{
-		icon = icons.email,
-		type = 'email',
-		default_app = 'thunderbird',
-		screen = 1
-	},
-	{
-		icon = icons.spotify,
-		type = 'music',
-		default_app = 'spotify',
-		screen = 1
-	},
-	{
 		icon = icons.terminal,
 		type = 'terminal',
 		default_app = 'kitty',
 		screen = 1
 	},
 	{
+		icon = icons.web_browser,
+		type = 'internet',
+		default_app = 'firefox',
+		screen = 1
+	},
+	{
 		icon = icons.text_editor,
 		type = 'code',
-		default_app = 'code',
+		default_app = 'subl3',
+		screen = 1
+	},
+	{
+		icon = icons.file_manager,
+		type = 'files',
+		default_app = 'dolphin',
+		screen = 1
+	},
+	{
+		icon = icons.multimedia,
+		type = 'music',
+		default_app = 'vlc',
+		screen = 1
+	},
+	{
+		icon = icons.games,
+		type = 'games',
+		default_app = 'supertuxkart',
+		screen = 1
+	},
+	{
+		icon = icons.graphics,
+		type = 'art',
+		default_app = 'gimp-2.10',
+		screen = 1
+	},
+	{
+		icon = icons.sandbox,
+		type = 'sandbox',
+		default_app = 'virtualbox',
+		screen = 1
+	},
+	{
+		icon = icons.development,
+		type = 'any',
+		default_app = '',
 		screen = 1
 	}
+	-- {
+	--   icon = icons.social,
+	--   type = 'social',
+	--   default_app = 'discord',
+	--   screen = 1
+	-- }
 }
 
 tag.connect_signal(

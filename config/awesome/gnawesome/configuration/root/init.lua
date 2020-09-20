@@ -41,7 +41,7 @@ root.buttons(
 			{'Shift'},
 			2,
 			function ()
-				awesome.emit_signal('widget::blue_light:toggle')
+				awesome.emit_signal("widget::blue_light:toggle")
 			end
 		),
 		awful.button(
