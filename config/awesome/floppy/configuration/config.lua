@@ -20,7 +20,7 @@ return {
 		},
 
 		clock = {
-			military_mode = false,
+			military_mode = true,
 		},
 
 		screen_recorder = {
