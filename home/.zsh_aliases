@@ -75,7 +75,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 alias gitu='git pull --rebase && git submodule update --remote'
-alias gitupsteam='git fetch upstream && git merge upstream/master'
+alias gitupstream='git fetch upstream && git merge upstream/master'
 
 # yay aliases
 alias upd='yay -Pw && yay'
