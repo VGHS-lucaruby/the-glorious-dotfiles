@@ -48,7 +48,7 @@ button {
 }
 
 entry {
-    font: "Inter Regular 12";
+    font: "MesloLGS NF Bold 12";
     background-color: @transparent;
     text-color: @foreground;
     expand: true;
@@ -82,7 +82,7 @@ inputbar {
 <<<<<<< HEAD
 
 entry {
-	font:            				"Comic Sans MS Bold 12";
+	font:            				"MesloLGS NF Bold 12";
 	background-color:               @background;
 	placeholder-color:          	@foreground;
 	placeholder:                	"Global Search";
@@ -136,12 +136,12 @@ element-icon {
 
 element-text {
 <<<<<<< HEAD
-	font:                      		"Comic Sans MS Bold 11";
+	font:                      		"MesloLGS NF Bold 11";
 	expand:                        	true;
 	horizontal-align:              	0.0;
 	vertical-align: 				0.5;
 =======
-    font: "Inter Regular 11";
+    font: "MesloLGS NF Bold 11";
     expand: true;
     horizontal-align: 0;
     vertical-align: 0.5;

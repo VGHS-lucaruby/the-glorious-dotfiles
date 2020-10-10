@@ -77,7 +77,7 @@ local build_social_button = function(website)
 
 	local social_tbox = wibox.widget {
 		text = social_name,
-		font = 'Comic Sans MS Bold 10',
+		font = 'MesloLGS NF Bold 10',
 		align = 'center',
 		valign = 'center',
 		widget = wibox.widget.textbox

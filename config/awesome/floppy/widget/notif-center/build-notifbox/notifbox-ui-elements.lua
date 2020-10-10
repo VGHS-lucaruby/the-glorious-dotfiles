@@ -32,7 +32,7 @@ end
 ui_noti_builder.notifbox_title = function(title)
 	return wibox.widget {
 		markup = title,
-		font   = 'Comic Sans MS Bold 12',
+		font   = 'MesloLGS NF Bold 12',
 		align  = 'left',
 		valign = 'center',
 		widget = wibox.widget.textbox
@@ -43,7 +43,7 @@ end
 ui_noti_builder.notifbox_message = function(msg)
 	return wibox.widget {
 		markup = msg,
-		font   = 'Comic Sans MS Bold 11',
+		font   = 'MesloLGS NF Bold 11',
 		align  = 'left',
 		valign = 'center',
 		widget = wibox.widget.textbox
@@ -54,7 +54,7 @@ end
 ui_noti_builder.notifbox_appname = function(app)
 	return wibox.widget {
 		markup  = app,
-		font   = 'Comic Sans MS Bold 12',
+		font   = 'MesloLGS NF Bold 12',
 		align  = 'left',
 		valign = 'center',
 		widget = wibox.widget.textbox
@@ -75,7 +75,7 @@ ui_noti_builder.notifbox_actions = function(n)
 					{
 						{
 							id     = 'text_role',
-							font   = 'Comic Sans MS Bold 10',
+							font   = 'MesloLGS NF Bold 10',
 							widget = wibox.widget.textbox
 						},
 						widget = wibox.container.place

@@ -5,7 +5,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 local hardware_header = wibox.widget {
 	text = 'Hardware Monitor',
-	font = 'Comic Sans MS Bold 12',
+	font = 'MesloLGS NF Bold 12',
 	align = 'left',
 	valign = 'center',
 	widget = wibox.widget.textbox

@@ -11,9 +11,9 @@ local create_clock = function(s)
 
 	local clock_format = nil
 	if not military_mode then
-		clock_format = '<span font="Comic Sans MS Bold 11">%I:%M %p</span>'
+		clock_format = '<span font="MesloLGS NF Bold 11">%I:%M %p</span>'
 	else
-		clock_format = '<span font="Comic Sans MS Bold 11">%H:%M</span>'
+		clock_format = '<span font="MesloLGS NF Bold 11">%H:%M</span>'
 	end
 
 	s.clock_widget = wibox.widget.textclock(
@@ -105,7 +105,7 @@ local create_clock = function(s)
 	s.month_calendar      = awful.widget.calendar_popup.month({
 		start_sunday      = true,
 		spacing           = dpi(5),
-		font              = 'Comic Sans MS Bold 10',
+		font              = 'MesloLGS NF Bold 10',
 		long_weekdays     = true,
 		margin            = dpi(5),
 		screen            = s,

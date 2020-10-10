@@ -26,14 +26,14 @@ local empty_notifbox = wibox.widget {
 		},
 		{
 			text = 'Wow, such empty.',
-			font = 'Comic Sans MS Bold 14',
+			font = 'MesloLGS NF Bold 14',
 			align = 'center',
 			valign = 'center',
 			widget = wibox.widget.textbox
 		},
 		{
 			text = 'Come back later.',
-			font = 'Comic Sans MS Bold 10',
+			font = 'MesloLGS NF Bold 10',
 			align = 'center',
 			valign = 'center',
 			widget = wibox.widget.textbox

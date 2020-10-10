@@ -52,7 +52,7 @@ local locked_tag = nil
 local uname_text = wibox.widget {
 	id = 'uname_text',
 	markup = '$USER',
-	font = 'Comic Sans MS Bold 12',
+	font = 'MesloLGS NF Bold 12',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -61,7 +61,7 @@ local uname_text = wibox.widget {
 local caps_text = wibox.widget {
 	id = 'uname_text',
 	markup = 'Caps Lock is on',
-	font = 'Comic Sans MS Bold 10',
+	font = 'MesloLGS NF Bold 10',
 	align = 'center',
 	valign = 'center',
 	opacity = 0.0,
@@ -78,9 +78,9 @@ local profile_imagebox = wibox.widget {
 	widget = wibox.widget.imagebox
 }
 
-local clock_format = '<span font="Comic Sans MS Bold 52">%H:%M</span>'
+local clock_format = '<span font="MesloLGS NF Bold 52">%H:%M</span>'
 if not locker_config.military_clock then
-	clock_format = '<span font="Comic Sans MS Bold 52">%I:%M %p</span>'
+	clock_format = '<span font="MesloLGS NF Bold 52">%I:%M %p</span>'
 end
 
 local time = wibox.widget.textclock(
@@ -90,7 +90,7 @@ local time = wibox.widget.textclock(
 
 local wanted_text = wibox.widget {
 	markup = 'INTRUDER ALERT!',
-	font   = 'Comic Sans MS Bold 12',
+	font   = 'MesloLGS NF Bold 12',
 	align  = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -114,7 +114,7 @@ local msg_table = {
 
 local wanted_msg = wibox.widget {
 	markup = 'This incident will be reported!',
-	font   = 'Comic Sans MS Bold 10',
+	font   = 'MesloLGS NF Bold 10',
 	align  = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
@@ -155,7 +155,7 @@ end
 
 local date = wibox.widget {
 	markup = date_value(),
-	font = 'Comic Sans MS Bold 20',
+	font = 'MesloLGS NF Bold 20',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
